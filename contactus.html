@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for icons -->
+    <style>
+        body {
+            background-image: linear-gradient(
+                to bottom, 
+                rgba(0, 0, 0, 0.6), 
+                rgba(0, 0, 0, 0.6)
+            ), 
+            url('event photos/background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #87CEEB;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative; /* Ensures the back button stays positioned correctly */
+        }
+
+        /* Back Button Styling */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: rgba(47, 79, 79, 0.7);
+            color: #87CEEB;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #87CEEB;
+            color: #fff;
+        }
+
+        .container {
+            background-color: rgba(47, 79, 79, 0.9); /* Slightly dark transparent background */
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            padding: 40px 20px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #87CEEB;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 1.5px;
+            border-bottom: 3px solid #87CEEB;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #d1ecf1;
+            line-height: 1.6;
+        }
+
+        .box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #87CEEB;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #87CEEB;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: #87CEEB;
+            margin: 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .box {
+                width: 100%;
+                max-width: 300px;
+                margin: 15px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back Button -->
+    <a href="front3.html" class="back-button">Back</a> <!-- Ensure to replace 'index.html' with the correct home page link -->
+
+    <div class="container">
+        <h1>प्रवेश सुरु आहेत..!!!</h1>
+        <p><i>शालेय शिक्षणासोबतच आध्यात्मिक शिक्षणासाठी एक सुवर्णसंधी...!<br><br>
+            आजच आपल्या मुलाच्या प्रवेशाची खात्री करा.</i></p>
+
+        <div class="box">
+            <i class="icon fas fa-map-marker-alt"></i>
+            <h3>Address</h3>
+            <p><i>नादब्रह्म अध्यात्मिक वारकरी शिक्षण संस्था, राहाता-पिंपळस, तालुका-राहाता, जिल्हा-अहमदनगर</i></p>
+        </div>
+
+        <div class="box">
+            <i class="icon fas fa-phone"></i>
+            <h3>Phone</h3>
+            <p>9921219915</p>
+        </div>
+
+        <div class="box">
+            <i class="icon fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p><i>nadbramhainstitute@gmail.com</i></p>
+        </div>
+    </div>
+</body>
+</html>

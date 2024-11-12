@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('file:///C:/Users/saksh/OneDrive/Desktop/event%20photos/frontpic.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #f0f0f0;
+            padding-top: 80px;
+        }
+
+        /* Header Section */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(30, 30, 30, 0.85);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .school-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #87CEEB;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #f0f0f0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #87CEEB;
+        }
+
+        /* Main Section */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        /* Add Image Above Content */
+
+       .content {
+            background: linear-gradient(135deg, #2F4F4F, #708090);
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            border: 2px solid #87CEEB;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .content:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #87CEEB;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px #000;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            color: #f0f0f0;
+            line-height: 1.8;
+            background: rgba(105, 105, 105, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Subjects Section */
+        .subjects {
+            background-color: rgba(47, 79, 79, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            margin: 20px;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .subjects h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #87CEEB;
+            text-transform: uppercase;
+        }
+
+        .subjects .subject-columns {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .subjects .column {
+            flex: 1;
+        }
+
+        .subjects ul {
+            list-style-type: none;
+            padding-left: 0;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #f0f0f0;
+        }
+
+        .subjects ul li {
+            background: #708090;
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 5px;
+            color: #f0f0f0;
+            font-weight: 500;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .subjects ul li:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Enrollment Info Section with Animated Background */
+        .enrollment-info {
+            padding: 20px;
+            font-size: 1.3rem;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            margin: 20px auto;
+            background: linear-gradient(120deg, #2F4F4F, #87CEEB, #2F4F4F);
+            background-size: 200% 200%;
+            animation: gradientMove 5s ease infinite;
+            border: 2px solid #87CEEB;
+            font-family: 'Great Vibes', cursive;
+            letter-spacing: 1px;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: rgba(30, 30, 30, 0.9);
+            color: #87CEEB;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="school-name">नादब्रह्म आध्यात्मिक वारकरी शिक्षण संस्था</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="file:///C:/Users/saksh/OneDrive/Desktop/gallery.html">Event Gallery</a>
+            <a href="file:///C:/Users/saksh/OneDrive/Desktop/contactus.html">Contact Us</a> <!-- Correct path to your Contact Us page -->
+            <a href="file:///C:/Users/saksh/OneDrive/Desktop/socialmedia.html">Social Media</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        
+        <section class="content">
+            <h1>नादब्रह्म अध्यात्मिक वारकरी शिक्षण संस्था</h1>
+            <p>भक्तवत्सल भगवान श्री पांडुरंगाच्या असिम कृपेने ब्रह्मलिन सद्‌गुरु नारायणगिरीजी महाराज,<br>
+            महंत गुरुवर्य स्वामी रामानंदगिरीजी महाराज,
+            महंत उद्धवजी महाराज मंडलिक, 
+            <br>महंत स्वामी नित्यानंदगिरीजी महाराज यांच्या कृपार्शिवादाने संस्था सुरु केलेली आहे.</p>
+        </section>
+
+        <!-- Subjects Section with Two Columns -->
+        <section class="subjects">
+            <h2>शिकविले जाणारे विषय:</h2>
+            <div class="subject-columns">
+                <div class="column">
+                    <ul>
+                        <li>श्रीमद् भगवत गित्ता</li>
+                        <li>हरिपाठ</li>
+                        <li>पाचल्या</li>
+                        <li>ज्ञानेश्वरी ओव्या माथा</li>
+                        <li>मराठी व संस्कृत व्याकरण</li>
+                        <li>विचार सागर</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li>आदि संत वाड्मय</li>
+                        <li>किर्तन</li>
+                        <li>प्रवचन</li>
+                        <li>साप्रदायिक व शास्त्रिय पखवाज</li>
+                        <li>शास्त्रीय व वारकरी गायन</li>
+                        <li>तबला</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enrollment Info Section with Moving Background -->
+        <div class="enrollment-info">
+            <i>प्रवेश सुरु आहे....!!<br><br>
+            इयता ४ थी ते १२ वी<br>
+            शालेय शिक्षणाबरोबरच अध्यात्मिक शिक्षणाची सुवर्ण संधी.....!!</i>
+        </div>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        </br> टिप:   1 ) अनाथ मुलांसाठी मोफत प्रशिक्षण.....2)  संस्थेच्या बाहेरील विद्यार्थ्यांचे दर शनिवार रविवार हार्मोनियम,तबला,पखवाज क्लास घेतले जातील</br>
+    </footer>
+</body>
+</html>
